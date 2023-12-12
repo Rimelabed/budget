@@ -1,0 +1,34 @@
+class Category:
+  ledger_list=[]
+  def __init__(self,name):
+        self.name = name
+        self.ledger = []
+    
+  def deposit(self,amount,description=""):
+    self.ledger.append({"amount":amount,"description":description})
+    
+  def withdraw(self,amount,price):
+    if (self.checkfunds(amount)):
+      self.ledger.append({"amount":-amount,"description":description})
+      return true
+    return false
+  def get_balance(self):
+    total=0
+    for item in self.ledger:
+      total=total+ item["amount"]
+    return total
+  
+def transfer(self,amount,budget_category):
+      if self.check_funds(amount):
+          self.withdraw(amount, f"Transfer to {budget_category.category}")
+          budget_category.deposit(amount, f"Transfer from {self.category}")
+          return True
+      return False
+def checkfunds(self,amounnt):
+  if (amount> self.get_balance()) :
+    return false
+  return true
+
+
+
+def create_spend_chart(categories):
